@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #000 !important; /* Set navbar background to black */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff !important; /* Set text color to white */
+}
+
+.navbar-dark .navbar-brand img.logo {
+  width: 150px; /* Adjust the logo width to your desired size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* White color for the toggle icon */
+}
+
+/* Optional: Styling for navbar items when hovered */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ddd !important; /* Light gray color when hovered */
+}
+
+
+/* Search & Filter Section */
+.filter-controls {
+  margin-top: 30px;
+}
+
+.filter-form select, .search-form input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.filter-form select {
+  background-color: #fff;
+}
+
+.search-form input {
+  background-color: #f9f9f9;
+}
+
+/* Gallery Section */
+.wallpaper-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wallpaper-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.wallpaper-card img {
+  width: 100%;
+  height: auto;
+}
+
+.wallpaper-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.wallpaper-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.wallpaper-info .btn {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.random-form button {
+  width: 100%;
+}
+
+/* Modal for Image Preview */
+.modal-content {
+  width: 80%;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #34495e;
+  padding: 40px 0;
+  color: #ecf0f1;
+  text-align: center;
+}
+
+.footer a {
+  color: #3498db;
+}
+
+.footer .social-icons a {
+  color: #ecf0f1;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+.footer .social-icons a:hover {
+  color: #3498db;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .wallpaper-card {
+      margin-bottom: 20px;
+  }
+
+  .filter-controls .row {
+      flex-direction: column;
+  }
+
+  .filter-controls .col-md-4 {
+      margin-bottom: 20px;
+  }
+
+  .footer {
+      padding: 20px 0;
+  }
+}
