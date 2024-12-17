@@ -1,0 +1,193 @@
+import Link from 'next/link'
+import Image from 'next/image'
+import { Button } from "@/components/ui/button"
+
+export default function ChickenSupplierLanding() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <header className="px-4 lg:px-6 h-16 flex items-center">
+        <Link className="flex items-center justify-center" href="#">
+          <Image
+            src="/placeholder.svg?height=40&width=40"
+            alt="Clucky's Logo"
+            width={40}
+            height={40}
+            className="rounded-full"
+          />
+          <span className="ml-2 text-2xl font-bold text-gray-900">Clucky's</span>
+        </Link>
+        <nav className="ml-auto flex gap-4 sm:gap-6">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#features">
+            Features
+          </Link>
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#products">
+            Products
+          </Link>
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
+            Contact
+          </Link>
+        </nav>
+      </header>
+      <main className="flex-1">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+              <Image
+                src="/placeholder.svg?height=550&width=550"
+                width={550}
+                height={550}
+                alt="Fresh Chicken"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+              />
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="space-y-2">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                    Fresh, Quality Chicken for Your Table
+                  </h1>
+                  <p className="max-w-[600px] text-gray-500 md:text-xl">
+                    Clucky's delivers farm-fresh, ethically raised chicken right to your doorstep. Taste the difference with our premium poultry.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                  <Link href="#contact">
+                    <Button className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50">
+                      Order Now
+                    </Button>
+                  </Link>
+                  <Link href="#features">
+                    <Button variant="outline" className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Why Choose Clucky's?</h2>
+            <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
+              <div className="flex flex-col items-center space-y-2 border-gray-200 p-4 rounded-lg">
+                <svg
+                  className=" h-10 w-10 text-gray-900"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                </svg>
+                <h3 className="text-xl font-bold">Farm Fresh</h3>
+                <p className="text-sm text-gray-500 text-center">Our chickens go from farm to table in record time, ensuring maximum freshness.</p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 border-gray-200 p-4 rounded-lg">
+                <svg
+                  className=" h-10 w-10 text-gray-900"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                <h3 className="text-xl font-bold">Quality Guaranteed</h3>
+                <p className="text-sm text-gray-500 text-center">We stand behind the quality of our chicken with a 100% satisfaction guarantee.</p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 border-gray-200 p-4 rounded-lg">
+                <svg
+                  className=" h-10 w-10 text-gray-900"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4" />
+                  <path d="M4 6v12c0 1.1.9 2 2 2h14v-4" />
+                  <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z" />
+                </svg>
+                <h3 className="text-xl font-bold">Ethically Raised</h3>
+                <p className="text-sm text-gray-500 text-center">Our chickens are raised in humane conditions with no antibiotics or hormones.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="products" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Our Products</h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {['Whole Chicken', 'Chicken Breast', 'Chicken Thighs', 'Chicken Wings', 'Ground Chicken', 'Chicken Sausages'].map((product) => (
+                <div key={product} className="flex flex-col items-center space-y-2 border-gray-200 p-4 rounded-lg shadow-sm">
+                  <div className="h-40 w-40 rounded-full overflow-hidden">
+                    <Image
+                      src={`/placeholder.svg?height=160&width=160`}
+                      width={160}
+                      height={160}
+                      alt={product}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold">{product}</h3>
+                  <p className="text-sm text-gray-500 text-center">Premium quality, always fresh</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Order?</h2>
+                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Get in touch with us to place your order or for any inquiries about our products.
+                </p>
+              </div>
+              <div className="w-full max-w-sm space-y-2">
+                <form className="flex space-x-2">
+                  <input
+                    className="flex h-10 w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    placeholder="Enter your email"
+                    type="email"
+                  />
+                  <Button type="submit">Subscribe</Button>
+                </form>
+                <p className="text-xs text-gray-500">
+                  By subscribing, you agree to our terms and conditions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+        <p className="text-xs text-gray-500">© 2024 Clucky's Chicken Supply. All rights reserved.</p>
+        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+          <Link className="text-xs hover:underline underline-offset-4" href="#">
+            Terms of Service
+          </Link>
+          <Link className="text-xs hover:underline underline-offset-4" href="#">
+            Privacy
+          </Link>
+        </nav>
+      </footer>
+    </div>
+  )
+}
+
